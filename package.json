@@ -1,0 +1,29 @@
+{
+  "name": "pi-herdr-split-fork",
+  "version": "0.1.0",
+  "description": "Clone the selected Pi conversation branch into a sibling Herdr pane.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Felo Restrepo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felores/pi-herdr-split-fork.git"
+  },
+  "homepage": "https://github.com/felores/pi-herdr-split-fork#readme",
+  "bugs": { "url": "https://github.com/felores/pi-herdr-split-fork/issues" },
+  "keywords": ["pi-package", "pi-extension", "herdr", "session", "fork"],
+  "engines": { "node": ">=22.18.0" },
+  "files": ["extensions", "docs", "README.md", "LICENSE"],
+  "pi": { "extensions": ["./extensions/split-fork.ts"] },
+  "peerDependencies": { "@earendil-works/pi-coding-agent": "*" },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.3",
+    "@types/node": "22.20.5",
+    "typescript": "7.0.2"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  }
+}
